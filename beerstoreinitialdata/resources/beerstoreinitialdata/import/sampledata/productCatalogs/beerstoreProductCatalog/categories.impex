@@ -1,0 +1,51 @@
+# -----------------------------------------------------------------------
+# [y] hybris Platform
+#
+# Copyright (c) 2017 SAP SE or an SAP affiliate company.  All rights reserved.
+#
+# This software is the confidential and proprietary information of SAP
+# ("Confidential Information"). You shall not disclose such Confidential
+# Information and shall use it only in accordance with the terms of the
+# license agreement you entered into with SAP.
+# -----------------------------------------------------------------------
+# ImpEx for Importing Categories into Beerstore Store
+
+# Macros / Replacement Parameter definitions
+$productCatalog=beerstoreProductCatalog
+$productCatalogName=Beerstore Product Catalog
+$catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
+$supercategories=source(code, $catalogVersion)[unique=true]
+$categories=target(code, $catalogVersion)[unique=true]
+
+$lang=en
+
+# Insert Categories
+INSERT_UPDATE Category;code[unique=true];allowedPrincipals(uid)[default='customergroup'];$catalogVersion
+;1
+;106
+;830
+;953
+;1355
+;1354
+;1356
+;1358
+
+# Insert Category Structure
+INSERT_UPDATE CategoryCategoryRelation;$categories;$supercategories
+;106;1
+;830;106
+;953;830
+;1354;1355
+;1355;1
+;1356;1355
+;1358;1355
+
+
+UPDATE Category;$catalogVersion;code[unique=true];name[lang=$lang];description[lang=$lang]
+;;1;Premium;
+;;106;Value;
+;;830;Domestic;
+;;1354;Specialty;
+;;1355;Ontario Craft;
+;;1356;Non Beer;
+;;1358;Inactive;
