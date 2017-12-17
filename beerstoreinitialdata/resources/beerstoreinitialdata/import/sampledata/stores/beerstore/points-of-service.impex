@@ -135,15 +135,15 @@ INSERT_UPDATE SpecialOpeningDay;openingSchedule(code)[unique=true];date[unique=t
 INSERT_UPDATE StoreLocatorFeature;code[unique=true]
 
 INSERT_UPDATE PointOfService;name[unique=true];type(code);address(&addrID);latitude;longitude;geocodeTimestamp[dateformat=dd-MM-yyyy];$storeImage;openingSchedule(code);basestore(uid)[default=$storeUid];features(code)
-;Hybris Powertools Tulsa1		;STORE;addr1;36,08383;-95,86570;01-10-2011;powertools_store_01;$oklahomaHours
-;Hybris Powertools Tulsa2		;STORE;addr2;36,08486;-95,86670;01-10-2011;powertools_store_01;$oklahomaHours
-;Hybris Powertools Tulsa3		;STORE;addr3;36,08589;-95,86770;01-10-2011;powertools_store_01;$oklahomaHours
-;Hybris Powertools Tulsa4		;STORE;addr4;36,08692;-95,86870;01-10-2011;powertools_store_01;$oklahomaHours
-;Hybris Powertools Tulsa5		;STORE;addr5;36,08795;-95,86970;01-10-2011;powertools_store_01;$oklahomaHours
-;Hybris Powertools Indianapolis	;STORE;addr6;39,70681;-86,14597;01-10-2011;powertools_store_02;$indianaHours
-;Hybris Powertools Tampa		;STORE;addr7;27,94997;-82,35097;01-10-2011;powertools_store_06;$floridaHours
-;Hybris Powertools El Cajon		;STORE;addr8;32,79505;-116,94078;01-10-2011;powertools_store_04;$californiaHours
-;Hybris Powertools Tacoma		;STORE;addr9;47,25541;-122,50914;01-10-2011;powertools_store_05;$washingtonHours
+;Hybris Powertools Tulsa1		;STORE;addr1;36,08383;-95,86570;01-10-2011;beerstore_store_01;$oklahomaHours
+;Hybris Powertools Tulsa2		;STORE;addr2;36,08486;-95,86670;01-10-2011;beerstore_store_01;$oklahomaHours
+;Hybris Powertools Tulsa3		;STORE;addr3;36,08589;-95,86770;01-10-2011;beerstore_store_01;$oklahomaHours
+;Hybris Powertools Tulsa4		;STORE;addr4;36,08692;-95,86870;01-10-2011;beerstore_store_01;$oklahomaHours
+;Hybris Powertools Tulsa5		;STORE;addr5;36,08795;-95,86970;01-10-2011;beerstore_store_01;$oklahomaHours
+;Hybris Powertools Indianapolis	;STORE;addr6;39,70681;-86,14597;01-10-2011;beerstore_store_02;$indianaHours
+;Hybris Powertools Tampa		;STORE;addr7;27,94997;-82,35097;01-10-2011;beerstore_store_06;$floridaHours
+;Hybris Powertools El Cajon		;STORE;addr8;32,79505;-116,94078;01-10-2011;beerstore_store_04;$californiaHours
+;Hybris Powertools Tacoma		;STORE;addr9;47,25541;-122,50914;01-10-2011;beerstore_store_05;$washingtonHours
 
 INSERT_UPDATE Address;&addrID;streetnumber[unique=true];streetname;town;region(country(isocode),isocode);country(isocode);postalcode[unique=true];phone1;owner(PointOfService.name)[unique=true]
 ;addr1;9909;East 55th Place;Tulsa;US:US-OK;US;74146;1-800-331-3333 (Customer Service);Hybris Powertools Tulsa1

@@ -9,7 +9,7 @@
 # license agreement you entered into with SAP.
 # -----------------------------------------------------------------------
 $classSystemVersion=systemVersion(catalog(id[default='BeerstoreClassification']),version[default='1.0'])
-$classCatalogVersion=catalogVersion(catalog(id[default='BeerstoreCClassification']),version[default='1.0'])
+$classCatalogVersion=catalogVersion(catalog(id[default='BeerstoreClassification']),version[default='1.0'])
 $classAttribute=classificationAttribute(code,$classSystemVersion)
 $classClass=classificationClass(code,$classCatalogVersion)
 $classAttributeAssignment=classAttributeAssignment($classClass,$classAttribute,$classSystemVersion)

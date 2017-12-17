@@ -19,7 +19,7 @@ $normal=normal(code, $catalogVersion)
 $others=others(code, $catalogVersion)
 $medias=medias(code, $catalogVersion)
 $galleryImages=galleryImages(qualifier, $catalogVersion)
-$siteResource=jar:de.hybris.platform.powertoolsstore.constants.PowertoolsStoreConstants&/powertoolsstore/import/sampledata/productCatalogs/$productCatalog/images
+$siteResource=jar:de.hybris.beerstore.initialdata.constants.BeerstoreInitialDataConstants&/beerstoreinitialdata/import/sampledata/productCatalogs/$productCatalog/images
 
 #Create Media
 INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];realfilename;mime[default='image/jpeg'];$catalogVersion;folder(qualifier)[default=images]
