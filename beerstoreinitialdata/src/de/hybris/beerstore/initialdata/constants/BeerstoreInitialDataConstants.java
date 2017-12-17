@@ -15,7 +15,7 @@ package de.hybris.beerstore.initialdata.constants;
  */
 public final class BeerstoreInitialDataConstants extends GeneratedBeerstoreInitialDataConstants
 {
-	public static final String EXTENSIONNAME = "beerstoreinitialdata";
+	public static final String EXTENSIONNAME = "beerstore";
 
 	private BeerstoreInitialDataConstants()
 	{

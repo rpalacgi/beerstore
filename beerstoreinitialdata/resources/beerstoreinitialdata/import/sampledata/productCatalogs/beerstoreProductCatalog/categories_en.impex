@@ -26,5 +26,18 @@ UPDATE Category;code[unique=true];$catalogVersion;name[lang=$lang];description[l
 ;;1355;Ontario Craft;
 ;;1356;Non Beer;
 ;;1358;Inactive;
+;1386;;Tag Guns;labeling gun;
+ ;1505;;Cable Crimpers/Cutters/Strippers;;
+ ;1593;;Screwdrivers;;
+ ;1595;;Angle Grinders;;
+ ;1596;;Sanders;;
+ ;1597;;Punches Or Nail Sets;;
+ ;1598;;Stripping Tools;;
+ ;1631;;Circular Saws;;
+ ;1641;;Nut Drivers;;
+ ;1710;;Jigsaws;;
+ ;1711;;Rotary Hammers;;
+ ;1731;;Universal Cutters;;
+ ;830;;Cables For Computers And Peripherals;;
 
 

@@ -13,9 +13,9 @@ $classCatalogVersion=catalogVersion(catalog(id[default='BeerstoreCClassification
 $classAttribute=classificationAttribute(code,$classSystemVersion)
 $classClass=classificationClass(code,$classCatalogVersion)
 $classAttributeAssignment=classAttributeAssignment($classClass,$classAttribute,$classSystemVersion)
-$productCatalog=powertoolsProductCatalog
+$productCatalog=beerstoreProductCatalog
 $productCatalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
-$solrIndexedType=powertoolsProductType
+$solrIndexedType=beerstoreProductType
 
 #
 # Add additional indexed properties for the classification features that we want to index

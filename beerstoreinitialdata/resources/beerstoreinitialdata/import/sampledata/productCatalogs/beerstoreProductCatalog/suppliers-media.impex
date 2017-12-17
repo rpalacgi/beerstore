@@ -12,11 +12,11 @@
 
 # Macros / Replacement Parameter definitions
 $productCatalog=beerstoreProductCatalog
-$productCatalogName=Powertools Product Catalog
+$productCatalogName=Beerstore Product Catalog
 $catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
 $superCategories=superCategories(code, $catalogVersion)
 $thumbnail=thumbnail(code, $catalogVersion)
-$siteResource=jar:de.hybris.platform.beerstore.constants.PowertoolsStoreConstants&/beerstore/import/sampledata/productCatalogs/$productCatalog
+$siteResource=jar:de.hybris.beerstore.initialdata.constants.BeerstoreInitialDataConstants&/beerstoreinitialdata/import/sampledata/productCatalogs/$productCatalog
 
 
 INSERT_UPDATE Media;code[unique=true];realfilename;@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator];mime[default='image/jpeg'];$catalogVersion

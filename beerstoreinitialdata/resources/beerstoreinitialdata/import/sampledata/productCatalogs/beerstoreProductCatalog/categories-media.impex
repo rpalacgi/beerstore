@@ -16,10 +16,7 @@ $productCatalogName=Beerstore Product Catalog
 $catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
 $thumbnail=thumbnail(code, $catalogVersion)
 $picture=picture(code, $catalogVersion)
-#$siteResource=jar:de.hybris.platform.beerstorestore.constants.BeerstoreStoreConstants&/beerstorestore/import/sampledata/productCatalogs/$productCatalog
-
-$siteResource=jar:de.hybris.training.initialdata.setup.InitialDataSystemSetup&/beerstoreinitialdata/import/productCatalogs/$productCatalog
-#$siteResource=jar:de.hybris.platform.beerstorestore.constants.BeerstoreInitialDataConstants&/beerstoreinitialdata/import/sampledata/productCatalogs/$productCatalog
+$siteResource=jar:de.hybris.beerstore.initialdata.constants.BeerstoreInitialDataConstants&/beerstoreinitialdata/import/sampledata/productCatalogs/$productCatalog
 
 # Import Category Media
 INSERT_UPDATE Media;code[unique=true];realfilename;@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator];mime[default='image/jpeg'];$catalogVersion

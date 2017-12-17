@@ -103,7 +103,7 @@ $facetSearchConfigDescription=BeerStore Solr Index
 $searchIndexNamePrefix=beerstore
 $solrIndexedType=beerstoreProductType
 $indexBaseSite=beerstore
-$indexLanguages=ja,en,de,zh
+$indexLanguages=en,de
 $indexCurrencies=USD,CAD
 
 #

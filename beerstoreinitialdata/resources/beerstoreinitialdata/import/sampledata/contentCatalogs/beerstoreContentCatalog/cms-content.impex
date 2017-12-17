@@ -21,9 +21,10 @@ $page=page(uid, $contentCV);
 $contentPage=contentPage(uid, $contentCV);
 $product=product(code, $productCV)
 $category=category(code, $productCV)
-$siteResource=jar:de.hybris.platform.beerstore.constants.BeerstoreStoreConstants&/beerstore/import/sampledata/contentCatalogs/$contentCatalog
-$productResource=jar:de.hybris.platform.beerstore.constants.BeerstoreStoreConstants&/beerstore/import/sampledata/productCatalogs/$productCatalog
-$jarResourceCms=jar:de.hybris.platform.beerstore.constants.BeerstoreStoreConstants&/beerstore/import/sampledata/cockpits/cmscockpit
+$siteResource=jar:de.hybris.beerstore.initialdata.constants.BeerstoreInitialDataConstants&/beerstoreinitialdata/import/sampledata/contentCatalogs/$contentCatalog
+$productResource=jar:de.hybris.beerstore.initialdata.constants.BeerstoreInitialDataConstants&/beerstoreinitialdata/import/sampledata/productCatalogs/$productCatalog
+$jarResourceCms=jar:de.hybris.beerstore.initialdata.constants.BeerstoreInitialDataConstants&/beerstoreinitialdata/import/sampledata/cockpits/cmscockpit
+
 $addonExtensionName=b2bacceleratoraddon
 $medias=medias(code, $contentCV);
 $mediaContainer=media(qualifier, $contentCV);

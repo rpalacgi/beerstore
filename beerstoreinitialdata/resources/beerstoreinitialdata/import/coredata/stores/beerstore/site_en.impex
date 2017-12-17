@@ -18,4 +18,4 @@ $lang=en
 # Create CMS Site
 # Create CMS Site
 UPDATE CMSSite;uid[unique=true];name[lang=$lang];locale[lang=$lang]
-;beerstore;"Beerstore Site";en_GB
+;beerstore;"Beerstore Site";en_US

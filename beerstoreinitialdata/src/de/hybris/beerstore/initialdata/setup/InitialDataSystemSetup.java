@@ -31,7 +31,7 @@ import java.util.List;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Required;
 
-
+import de.hybris.beerstore.initialdata.services.dataimport.impl.BeerstoreSampleDataImportService;
 
 
 /**
@@ -51,6 +51,8 @@ public class InitialDataSystemSetup extends AbstractSystemSetup
 	private SampleDataImportService sampleDataImportService;
 
 	public static final String POWERTOOLS = "beerstore";
+
+	private BeerstoreSampleDataImportService beerstoreSampleDataImportService;
 
 	/**
 	 * Generates the Dropdown and Multi-select boxes for the project data import
@@ -130,6 +132,10 @@ public class InitialDataSystemSetup extends AbstractSystemSetup
 		getSampleDataImportService().execute(this, context, importData);
 		//getPowertoolsSampleDataImportService().importCommerceOrgData(context);
 		getEventService().publishEvent(new SampleDataImportedEvent(context, importData));
+
+		getBeerstoreSampleDataImportService().importCommerceOrgData(context);
+		getEventService().publishEvent(new SampleDataImportedEvent(context, importData));
+
 	}
 
 
@@ -153,5 +159,16 @@ public class InitialDataSystemSetup extends AbstractSystemSetup
 	public void setSampleDataImportService(final SampleDataImportService sampleDataImportService)
 	{
 		this.sampleDataImportService = sampleDataImportService;
+	}
+
+	public BeerstoreSampleDataImportService getBeerstoreSampleDataImportService()
+	{
+		return beerstoreSampleDataImportService;
+	}
+
+	//@Required
+	public void setBeerstoreSampleDataImportService(final BeerstoreSampleDataImportService beerstoreSampleDataImportService)
+	{
+		this.beerstoreSampleDataImportService = beerstoreSampleDataImportService;
 	}
 }
